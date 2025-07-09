@@ -24,13 +24,14 @@ body {
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
 }
 
-/* Estilo general para celdas */
 .inctable th, .inctable td {
-    padding: 8px 15px; /* 🔽 Reducido para menos altura */
+    padding: 4px 10px; /* 🔽 Menos espacio arriba y abajo */
     border: 1px solid #eee;
     text-align: center;
     vertical-align: top;
+    line-height: 1.2; /* 🔽 Más compacto */
 }
+
 
 /* Encabezados oscuros */
 .inctable th {
@@ -45,15 +46,17 @@ body {
     background-color: #f3f3f3;
 }
 
-/* Columna de RESPUESTA específica */
-.inctable td:nth-child(7), /* Ajusta según la posición de columna */
-.inctable th:nth-child(7) {
+.inctable td:nth-child(7),
+.inctable td:nth-child(8) {
     max-width: 300px;
     white-space: pre-wrap;
     word-wrap: break-word;
     overflow-wrap: break-word;
-    overflow-x: auto;
+    font-size: 14px;
+    line-height: 1.2;
+    padding: 4px 10px;
 }
+
 
 /* Celda con respuesta larga */
 
@@ -277,14 +280,4 @@ form {
     .navitem:last-child .navlink {
         border-bottom: none; /* Eliminar borde del último enlace */
     }
-}
-
-
-.evaluacion-col {
-    font-family: 'Courier New', Courier, monospace; /* igual que <pre> */
-    font-size: 14px;
-    line-height: 1.5;
-    white-space: pre-wrap; /* respeta saltos de línea como <pre> */
-    word-wrap: break-word;
-    overflow-wrap: break-word;
 }

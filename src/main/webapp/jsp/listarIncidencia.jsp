@@ -41,18 +41,18 @@
                 <td><%= inc.getPrioridad() %></td>
                 <td><%= inc.getEstado() != null ? inc.getEstado() : "Pendiente" %></td>
                 <td><%= inc.getFecha() %></td>
-                <td class="evaluacion-col">
-    <div class="evaluacion-col">
-        <%= inc.getRespuesta() != null ? inc.getRespuesta().replaceAll("\n", "<br/>") : "-" %>
-    </div>
+               
+    <td>
+    <% if (inc.getRespuesta() != null) { %>
+        <pre style="margin: 0; font-family: 'Courier New', Courier, monospace; font-size: 14px; line-height: 1.4;"><%= inc.getRespuesta() %></pre>
+    <% } else { %>
+        -
+    <% } %>
 </td>
 
-
-                <td class="evaluacion-col">
+                <td>
     <% if (inc.getEvaluacion() != null) { %>
-        <div class="evaluacion-col">
-            <%= inc.getEvaluacion().replaceAll("\n", "<br/>") %>
-        </div>
+        <pre><%= inc.getEvaluacion() %></pre>
     <% } else if (!esAdmin && "Finalizado".equals(inc.getEstado())) { %>
         <a href="evaluarIncidencia.jsp?id=<%= inc.getId() %>">
             <button type="button">Evaluar</button>
@@ -61,6 +61,7 @@
         -
     <% } %>
 </td>
+
 
 
                 <td>

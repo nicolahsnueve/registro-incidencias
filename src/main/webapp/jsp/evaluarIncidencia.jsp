@@ -25,7 +25,7 @@
 
         <div class="m">
             <label>2. ¿Se resolvió su incidencia?</label><br>
-            <label><input type="radio" name="resolucion" value="Sí" required> Sí</label><br>
+            <label><input type="radio" name="resolucion" value="Si" required> Sí</label><br>
             <label><input type="radio" name="resolucion" value="No"> No</label>
         </div>
 

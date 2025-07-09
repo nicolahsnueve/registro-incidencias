@@ -280,3 +280,11 @@ form {
 }
 
 
+.evaluacion-col {
+    font-family: 'Courier New', Courier, monospace; /* igual que <pre> */
+    font-size: 14px;
+    line-height: 1.5;
+    white-space: pre-wrap; /* respeta saltos de línea como <pre> */
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+}
